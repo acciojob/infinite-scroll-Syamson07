@@ -1,6 +1,5 @@
-//your code here!
-// Select the container where the list items are
-const list = document.getElementById('list');
+// Select the correct list element
+const list = document.getElementById('infi-list');
 
 // Function to add list items
 function addListItems(count) {
@@ -11,14 +10,12 @@ function addListItems(count) {
     }
 }
 
-// Add 10 items initially
-addListItems(10);
+// Add 2 items initially (as per test case)
+addListItems(2);
 
-// Listen for scroll event
+// Add 2 more items when user scrolls to bottom
 window.addEventListener('scroll', () => {
-    // Check if user reached bottom of the page
     if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
-        addListItems(2); // Add 2 more items
+        addListItems(2);
     }
 });
-

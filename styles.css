@@ -10,12 +10,12 @@ h1 {
   margin-bottom: 30px;
 }
 
-#list {
+#infi-list {
   list-style: none;
   padding: 0;
 }
 
-#list li {
+#infi-list li {
   background-color: white;
   margin: 10px 0;
   padding: 15px;
