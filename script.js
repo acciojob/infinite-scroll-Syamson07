@@ -1,5 +1,5 @@
 // Select the list element
-const list = document.getElementById("item-list");
+const list = document.getElementById("infi-list");
 
 // Variable to keep track of the number of items
 let itemCount = 1;
@@ -16,14 +16,13 @@ function addListItems() {
 
 // Event listener for scroll
 window.addEventListener("scroll", () => {
-    // Check if the user has scrolled to the bottom of the list
     if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
         addListItems();
     }
 });
 
-// Initially adding 10 items to the list
-for (let i = 0; i < 10; i++) {
+// Initially adding 2 items to the list
+for (let i = 0; i < 2; i++) {
     const newItem = document.createElement("li");
     newItem.textContent = "Item " + itemCount;
     list.appendChild(newItem);

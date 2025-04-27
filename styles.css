@@ -14,13 +14,13 @@
 }
 
 /* Style for the list */
-ul#item-list {
+ul#infi-list {
     list-style-type: none;
     padding: 0;
 }
 
 /* Style for each list item */
-ul#item-list li {
+ul#infi-list li {
     font-size: 18px;
     padding: 10px;
     margin: 10px 0;
@@ -30,7 +30,7 @@ ul#item-list li {
     transition: background-color 0.3s ease;
 }
 
-ul#item-list li:hover {
+ul#infi-list li:hover {
     background-color: #e0e0e0;
 }
 
