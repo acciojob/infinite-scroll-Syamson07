@@ -1,8 +1,6 @@
-/* Basic Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* Ensure that the body or the main container is tall enough to trigger scrolling */
+body {
+    min-height: 200vh; /* Makes the page long enough to require scrolling */
 }
 
 /* Container for the list */
@@ -11,12 +9,15 @@
     margin: 0 auto;
     padding: 20px 0;
     text-align: center;
+    max-width: 100%; /* Ensure the container uses full width */
+    overflow: auto; /* Enable scrolling if needed */
 }
 
 /* Style for the list */
 ul#infi-list {
     list-style-type: none;
     padding: 0;
+    margin: 0;
 }
 
 /* Style for each list item */
@@ -32,9 +33,4 @@ ul#infi-list li {
 
 ul#infi-list li:hover {
     background-color: #e0e0e0;
-}
-
-/* Adding some space at the bottom for the scroll event */
-body {
-    min-height: 200vh; /* Ensure there's enough space to scroll */
 }
