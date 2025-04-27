@@ -1,21 +1,31 @@
-// Select the correct list element
-const list = document.getElementById('infi-list');
+// Select the list element
+const list = document.getElementById("item-list");
 
-// Function to add list items
-function addListItems(count) {
-    for (let i = 0; i < count; i++) {
-        const li = document.createElement('li');
-        li.textContent = `Item ${list.children.length + 1}`;
-        list.appendChild(li);
+// Variable to keep track of the number of items
+let itemCount = 1;
+
+// Function to add 2 new list items with unique names
+function addListItems() {
+    for (let i = 0; i < 2; i++) {
+        const newItem = document.createElement("li");
+        newItem.textContent = "Item " + itemCount;
+        list.appendChild(newItem);
+        itemCount++;
     }
 }
 
-// Add 2 items initially (as per test case)
-addListItems(2);
-
-// Add 2 more items when user scrolls to bottom
-window.addEventListener('scroll', () => {
+// Event listener for scroll
+window.addEventListener("scroll", () => {
+    // Check if the user has scrolled to the bottom of the list
     if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
-        addListItems(2);
+        addListItems();
     }
 });
+
+// Initially adding 10 items to the list
+for (let i = 0; i < 10; i++) {
+    const newItem = document.createElement("li");
+    newItem.textContent = "Item " + itemCount;
+    list.appendChild(newItem);
+    itemCount++;
+}

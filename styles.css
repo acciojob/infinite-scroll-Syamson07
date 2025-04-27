@@ -1,24 +1,40 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Container for the list */
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Style for the list */
+ul#item-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* Style for each list item */
+ul#item-list li {
+    font-size: 18px;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+ul#item-list li:hover {
+    background-color: #e0e0e0;
+}
+
+/* Adding some space at the bottom for the scroll event */
 body {
-  font-family: Arial, sans-serif;
-  padding: 20px;
-  margin: 0;
-  background-color: #f5f5f5;
-}
-
-h1 {
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-#infi-list {
-  list-style: none;
-  padding: 0;
-}
-
-#infi-list li {
-  background-color: white;
-  margin: 10px 0;
-  padding: 15px;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    min-height: 200vh; /* Ensure there's enough space to scroll */
 }
